@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Site Maintenance</title>
+    
+    <style>
+      body {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin: 7rem 0 0 0 !important;
+        padding: 0 !important;
+      }
+      h1 { font-size: 50px; }
+      body { font: 20px Helvetica, sans-serif; color: #333; }
+      article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        width: 40rem;
+        padding: 2rem;
+      }
+      a { color: #dc8100; text-decoration: none; }
+      a:hover { color: #333; text-decoration: none; }
+      img {
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        box-shadow: 0 0 5rem gray;
+      }
+      #anim {
+	display: none;
+        position: absolute;
+        animation: anim 20s infinite ease-in-out;
+        background-color: black;
+      }
+
+      #logo {
+        position: relative;
+        perspective: 1000px;
+        cursor: pointer;
+      }
+
+      #logo > .text {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: calc(100% - 2rem);
+	height: calc(50% - 2rem);
+	padding: 1rem;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      #logo > .transformed {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: inset(0 0 50% 0);
+        transition: 1s;
+      }
+
+      #logo::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 0rem;
+        background-color: brown;
+        transition: 1s;
+        opacity: .1;
+      }
+
+      #logo:hover::after {
+        height: .1rem;
+      }
+
+      #logo:hover > .transformed {
+        transform: rotateX(-70deg);
+        transform-origin: 50% 50%;
+        border-bottom: 5px solid black;
+      }
+
+      @keyframes anim {
+        0% {
+          left: 0;
+          top: 0;
+          width: .5rem;
+          height: .5rem;
+        }
+
+        15% {
+          width: 5rem;
+        }
+        25% {
+          left: calc(100% - .5rem);
+          top: 0;
+          width: .5rem;
+          height: .5rem;
+        }
+
+        40% {
+          height: 5rem;
+        }
+        50% {
+          left: calc(100% - .5rem);
+          top: calc(100% - .5rem);
+          height: .5rem;
+          width: .5rem;
+        }
+
+        65% {
+          width: 5rem;
+        }
+        75% {
+          left: 0%;
+          top: calc(100% - .5rem);
+          height: .5rem;
+          width: .5rem;
+        }
+
+        90% {
+          height: 5rem;
+        }
+        100% {
+          left: 0%;
+          top: 0%;
+          height: .5rem;
+          width: .5rem;
+        }
+      }
+    </style>
+	</head>
+	<body>
+    <article>
+      <span id="anim"></span>
+      <div id="logo">
+        <div class="text">
+          <p>Nothing to see here!</p>
+        </div>
+        <img src="logo.png" class="transformed">
+        <img src="logo.png">
+      </div>
+        <h1>We’ll be back soon!</h1>
+        <div>
+            <p>Sorry for the inconvenience but we’re performing some maintenance at the moment. If you need to you can always contact us, otherwise we’ll be back online shortly!</p>
+            <p>— The Team</p>
+        </div>
+        <iframe src="https://ptb.discord.com/widget?id=435056107371888640&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </article>
+  </body>
+
+</html>
