@@ -10,6 +10,13 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
+    script: [
+      {
+        src: "https://data.r4nd0.de/umami.js",
+        async: true,
+        'data-website-id': '7849348c-31d5-4355-8c30-4ed074e1dabb'
+      },
+    ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
